@@ -1,6 +1,6 @@
 # Pharaoh
 
-TODO: Write a gem description
+Generate your backend tests from JSON-Schema documents.  This allows a documentation centered workflow to drive colloboration between frontend, backend and even third parties.
 
 ## Installation
 
