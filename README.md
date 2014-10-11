@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+TODO: Create type_mapping_spec to test translation of schema properties into airborne hash
 
 ## Contributing
 
