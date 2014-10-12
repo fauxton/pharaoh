@@ -11,11 +11,11 @@ describe AssertionMapping do
     context "optional" do
       context "integer" do
         let(:schema) { optional_property("foo", "integer") }
-        it { expect(mapped_result).to eq({"foo" => :int_or_null}) }
+        it { expect(mapped_result).to eq({"foo" => :integer_or_null}) }
       end
       context "boolean" do
         let(:schema) { optional_property("foo", "boolean") }
-        it { expect(mapped_result).to eq({"foo" => :bool_or_null}) }
+        it { expect(mapped_result).to eq({"foo" => :boolean_or_null}) }
       end
       context "string" do
         let(:schema) { optional_property("foo", "string") }
@@ -34,11 +34,11 @@ describe AssertionMapping do
     context "required" do
       context "integer" do
         let(:schema) { required_property("foo", "integer") }
-        it { expect(mapped_result).to eq({"foo" => :int}) }
+        it { expect(mapped_result).to eq({"foo" => :integer}) }
       end
       context "boolean" do
         let(:schema) { required_property("foo", "boolean") }
-        it { expect(mapped_result).to eq({"foo" => :bool}) }
+        it { expect(mapped_result).to eq({"foo" => :boolean}) }
       end
       context "string" do
         let(:schema) { required_property("foo", "string") }
@@ -83,12 +83,12 @@ describe AssertionMapping do
   def mock_adapter
     {
       integer: {
-        required: :int,
-        optional: :int_or_null
+        required: :integer,
+        optional: :integer_or_null
       },
       boolean: {
-        required: :bool,
-        optional: :bool_or_null
+        required: :boolean,
+        optional: :boolean_or_null
       },
       string: {
         required: :string,
